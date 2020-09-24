@@ -32,6 +32,20 @@ def get_coodinates():
 
     return result
 
+def get_coodinatesv2():
+    # get coodinates get from gui
+
+    result=[]
+
+    with open('coordinate.txt') as f:
+
+        w, h = [int(x) for x in next(f).split()]
+        array = [[int(x) for x in line.split()] for line in f]
+        result.append([w,h])
+        result.append(array[0])
+
+    return result
+
 if __name__ == "__main__":
 
     # read image
